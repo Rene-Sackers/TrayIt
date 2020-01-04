@@ -1,0 +1,24 @@
+﻿<Window x:Class="TrayIt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <ListBox Name="ListBoxApplications" Grid.Column="0"/>
+
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.Column="1">
+            <Button Name="ButtonTrayControl" Content="Tray >" Height="23" Margin="5" Click="ButtonTrayControl_Click"/>
+            <Button Name="ButtonUntrayControl" Content="&lt; Untray" Height="23" Margin="5" Click="ButtonUntrayControl_Click"/>
+            <Button Name="ButtonRestoreAll" Content="Restore All" Height="23" Margin="5" IsEnabled="True" Click="ButtonRestoreAll_Click"/>
+            <Button Name="ButtonRefresh" Content="Refresh" Height="23" Margin="5" IsEnabled="True" Click="ButtonRefresh_Click"/>
+            <CheckBox Name="CheckBoxTrayInactive" Content="Tray Inactive" Margin="5" Checked="CheckBoxTrayInactive_Checked" Unchecked="CheckBoxTrayInactive_Unchecked" IsChecked="True"/>
+        </StackPanel>
+
+        <ListBox Name="ListBoxTrayedApplications" Grid.Column="2"/>
+    </Grid>
+</Window>
